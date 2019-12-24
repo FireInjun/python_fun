@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-
+"""
 set_vars(){
     DIR=$1
     TEST="test_${1}.py"
@@ -27,3 +27,4 @@ build_files
 }
 
 main
+"""
