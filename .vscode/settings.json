@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/Users/fireinjun/.local/share/virtualenvs/python_fun-LiKpAZI7/bin/python",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true
+}

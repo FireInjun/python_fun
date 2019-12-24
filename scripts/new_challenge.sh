@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 # -*- coding: utf-8 -*-
 
-PATH=$PATH:~
+
 
 set_vars(){
     DIR=$1
