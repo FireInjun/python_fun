@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-import os
-from constants import
+import constants
 
 
 def check_if_repo():
     """
     Check if currently in *correct* repo.
     """
-    if REPO_NAME not in PWD:
+    if constants.REPO_NAME not in constants.PWD:
         print("NOT IN REPO")
         return False
     else:
@@ -19,7 +18,7 @@ def check_if_root():
     """
     Check if currently in *root* directory of repo.
     """
-    if PWD().endswith(REPO_NAME):
+    if constants.PWD().endswith(constants.REPO_NAME):
         print("ROOT DIR")
         return True
     else:
@@ -31,4 +30,4 @@ def go_to_root():
     """
     Change directory to the *root* directory of the repo.
     """
-    CD(ROOT_DIR)
+    constants.CD(constants.ROOT_DIR)
