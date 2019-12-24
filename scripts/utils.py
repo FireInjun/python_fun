@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-import * from script_constants
+from constants import
 
 
 def check_if_repo():

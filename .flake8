@@ -1,4 +1,4 @@
 [flake8]
-ignore = E999
+ignore = E999, F841
 max-line-length = 100
 max-complexity = 10
