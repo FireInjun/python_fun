@@ -34,9 +34,9 @@ def convert_tuple(tup):
     return str
 
 
-def write_file(file, cont_dict):
+def write_file(file, tup):
     """Writes template to new files."""
-    str = convert_tuple(cont_dict.values())
+    str = convert_tuple(tup)
     f = open(file, "w+")
     f.write(str)
     f.close()
