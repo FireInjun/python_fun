@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 import constants
+import os
 
 
 def check_if_repo():
-    """
-    Check if currently in *correct* repo.
-    """
+    """ Check if currently in *correct* repo. """
     if constants.REPO_NAME not in constants.PWD:
         print("NOT IN REPO")
         return False
@@ -15,9 +14,7 @@ def check_if_repo():
 
 
 def check_if_root():
-    """
-    Check if currently in *root* directory of repo.
-    """
+    """ Check if currently in *root* directory of repo. """
     if constants.PWD().endswith(constants.REPO_NAME):
         print("ROOT DIR")
         return True
@@ -27,7 +24,24 @@ def check_if_root():
 
 
 def go_to_root():
-    """
-    Change directory to the *root* directory of the repo.
-    """
+    """ Change directory to the *root* directory of the repo. """
     constants.CD(constants.ROOT_DIR)
+
+
+def convert_tuple(tup):
+    """ Converts tuples into strings."""
+    str = "".join(tup)
+    return str
+
+
+def write_file(file, cont_dict):
+    """Writes template to new files."""
+    str = convert_tuple(cont_dict.values())
+    f = open(file, "w+")
+    f.write(str)
+    f.close()
+
+
+def up_one():
+    """ Move up a single directory. """
+    os.chdir("..")

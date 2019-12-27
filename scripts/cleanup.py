@@ -4,9 +4,7 @@ import constants
 
 
 def clear_pycache():
-    """
-    Delete the *__pycache__* folders, if present
-    """
+    """ Delete the *__pycache__* folders, if present """
     constants.CD(constants.SRC_DIR)
     for folder in constants.LS():
         constants.CD(folder)
