@@ -7,6 +7,7 @@ pattern = re.compile(constants.REGEX_NAME)
 challenge_input = str(input("What is the name of the challenge? \n"))
 
 """
+** Clean up input with this **
 Using regex, remove all non-alphanumeric chars,
 Strip leading and trailing white space
 Make lowercase
