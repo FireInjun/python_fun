@@ -4,54 +4,45 @@ import unittest
 import unittest.mock
 from fizz_buzz import fizzBuzz
 
-return_numbers = [
-    [821],
-    [782],
-    [137],
-    [64],
-    [779],
-    [582, "Fizz"],
-    [867, "Fizz"],
-    [261, "Fizz"],
-    [507, "Fizz"],
-    [333, "Fizz"],
-    [460, "Buzz"],
-    [5, "Buzz"],
-    [50, "Buzz"],
-    [55, "Buzz"],
-    [95, "Buzz"],
-    [15, "FizzBuzz"],
-    [75, "FizzBuzz"],
-    [120, "FizzBuzz"],
-    [555, "FizzBuzz"],
-    [45, "FizzBuzz"],
-]
-
 
 class FizzbuzzTestCase(unittest.TestCase):
     """Tests for fizzbuzz.py."""
 
     def test_number(self):
         """Testing for numbers that will return an integer."""
-        res = fizzBuzz(return_numbers[0])
-        num = return_numbers[0]
-        self.assertEqual(res, num, "test_number Failure!")
+        self.assertEqual(fizzBuzz(821), 821)
+        self.assertEqual(fizzBuzz(782), 782)
+        self.assertEqual(fizzBuzz(137), 137)
+        self.assertEqual(fizzBuzz(64), 64)
+        self.assertEqual(fizzBuzz(779), 779)
 
     def test_zero(self):
         """Testing for zero, should return an integer."""
-        pass
+        self.assertEqual(fizzBuzz(0), 0)
 
     def test_fizz(self):
         """Testing for numbers divisible by 3 cleanly, should return 'Fizz'."""
-        pass
+        self.assertEqual(fizzBuzz(582), "Fizz")
+        self.assertEqual(fizzBuzz(867), "Fizz")
+        self.assertEqual(fizzBuzz(261), "Fizz")
+        self.assertEqual(fizzBuzz(507), "Fizz")
+        self.assertEqual(fizzBuzz(333), "Fizz")
 
     def test_buzz(self):
         """Testing for numbers divisible by 5 cleanly, should return 'Buzz'."""
-        pass
+        self.assertEqual(fizzBuzz(460), "Buzz")
+        self.assertEqual(fizzBuzz(5), "Buzz")
+        self.assertEqual(fizzBuzz(50), "Buzz")
+        self.assertEqual(fizzBuzz(55), "Buzz")
+        self.assertEqual(fizzBuzz(95), "Buzz")
 
     def test_fizzbuzz(self):
         """Testing for numbers divisible by 3 and 5 cleanly, should return 'FizzBuzz'."""
-        pass
+        self.assertEqual(fizzBuzz(15), "FizzBuzz")
+        self.assertEqual(fizzBuzz(75), "FizzBuzz")
+        self.assertEqual(fizzBuzz(120), "FizzBuzz")
+        self.assertEqual(fizzBuzz(555), "FizzBuzz")
+        self.assertEqual(fizzBuzz(45), "FizzBuzz")
 
 
 if __name__ == "__main__":
