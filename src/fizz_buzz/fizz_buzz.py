@@ -10,7 +10,9 @@ def fizzBuzz(n):
     print_list = []
     five = (0, 5)
     three = (3, 6, 9)
-    N_list = list(map(int, list(str(n))))
+    N = list(str(n))
+    N_list = [int(x) for x in N]
+    print(type(N_list[1]))
 
     for i in five:
         if N_list[-1] == i:
@@ -29,8 +31,9 @@ def fizzBuzz(n):
 
 
 if __name__ == "__main__":
-    if len(sys.argv[1]) < 2:
-        n = int(input().strip())
+    if len(sys.argv) < 2:
+        n = int(input("Please enter a number:\n").strip())
     else:
         n = int(sys.argv[1].strip())
+
     fizzBuzz(n)

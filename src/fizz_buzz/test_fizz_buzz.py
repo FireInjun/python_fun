@@ -2,7 +2,7 @@
 
 import unittest
 import unittest.mock
-from fizzbuzz import fizzBuzz
+from fizz_buzz import fizzBuzz
 
 return_numbers = [
     [821],
@@ -33,7 +33,9 @@ class FizzbuzzTestCase(unittest.TestCase):
 
     def test_number(self):
         """Testing for numbers that will return an integer."""
-        self.a(fizzBuzz(558), "FizzBuzz")
+        res = fizzBuzz(return_numbers[0])
+        num = return_numbers[0]
+        self.assertEqual(res, num, "test_number Failure!")
 
     def test_zero(self):
         """Testing for zero, should return an integer."""
@@ -53,4 +55,4 @@ class FizzbuzzTestCase(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=3)
