@@ -1,5 +1,5 @@
 import unittest
-from fizz_buzz_plus import solution
+from if_else import solution
 
 
 class TestIfElse(unittest.TestCase):

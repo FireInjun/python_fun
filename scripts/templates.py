@@ -1,10 +1,13 @@
 import constants
 import re
+import sys
+
+if len(sys.argv[1]) < 2:
+    challenge_input = str(input("What is the name of the challenge? \n"))
+else:
+    challenge_input = str(sys.argv[1].strip())
 
 pattern = re.compile(constants.REGEX_NAME)
-
-# Raw input
-challenge_input = str(input("What is the name of the challenge? \n"))
 
 """
 ** Clean up input with this **
@@ -24,12 +27,16 @@ dir_path = f"{constants.SRC_DIR}/{challenge}"
 # Challenge file template.
 challenge_tuple = (
     "#!/usr/bin/env python3",
+    "import sys",
     "\n\n\ndef first_function(something):\n",
     f"{constants.TAB}{constants.TRIP_Q} Does nothing with input of 'something'. {constants.TRIP_Q}",
     f"\n{constants.TAB}pass\n\n\n",
     f"def second_function(something):\n",
     f"{constants.TAB}{constants.TRIP_Q}Also does nothing with input of 'something'.{constants.TRIP_Q}",
     f"\n{constants.TAB}pass\n",
+    f'\n\n\nif __name__ == "__main__":\n{constants.TAB}if len(sys.argv[1]) < 2:',
+    f'\n{constants.TAB}{constants.TAB}something = int(input("Number? ").strip())',
+    f"\nelse:\n {constants.TAB}something = int(sys.argv[1].strip())',",
 )
 
 # Test file template.
