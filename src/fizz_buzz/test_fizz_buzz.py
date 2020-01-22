@@ -44,6 +44,10 @@ class FizzbuzzTestCase(unittest.TestCase):
         self.assertEqual(fizzBuzz(555), "FizzBuzz")
         self.assertEqual(fizzBuzz(45), "FizzBuzz")
 
+    def test_print_list(self):
+        """Testing to verify the print_list variable works correctly."""
+        self.assertIs
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=3)
