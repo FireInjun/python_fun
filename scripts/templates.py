@@ -26,22 +26,22 @@ dir_path = f"{constants.SRC_DIR}/{challenge}"
 
 # Challenge file template.
 challenge_tuple = (
-    "#!/usr/bin/env python3",
+    "u'\u0023'!/usr/bin/env python",
     "import sys",
     "\n\n\ndef first_function(something):\n",
-    f"{constants.TAB}{constants.TRIP_Q} Does nothing with input of 'something'. {constants.TRIP_Q}",
+    f"{constants.TAB}{constants.TRIP_Q} Does nothing with input of 'something'.{constants.TRIP_Q}",
     f"\n{constants.TAB}pass\n\n\n",
     f"def second_function(something):\n",
     f"{constants.TAB}{constants.TRIP_Q}Also does nothing with input of 'something'.{constants.TRIP_Q}",
     f"\n{constants.TAB}pass\n",
-    f'\n\n\nif __name__ == "__main__":\n{constants.TAB}if len(sys.argv[1]) < 2:',
+    f'\n\nif __name__ == "__main__":\n{constants.TAB}if len(sys.argv[1]) < 2:',
     f'\n{constants.TAB}{constants.TAB}something = int(input("Number? ").strip())',
-    f"\nelse:\n {constants.TAB}something = int(sys.argv[1].strip())',",
+    f"\nelse:\n {constants.TAB}something = int(sys.argv[1].strip())",
 )
 
 # Test file template.
 test_tuple = (
-    "#!/usr/bin/env python3",
+    "u'\u0023'!/usr/bin/env python3",
     f"\nimport unittest\nfrom {challenge} import first_function\n\n\n",
     f"class {challenge_title}TestCase(unittest.TestCase):\n",
     f"{constants.TAB}{constants.TRIP_Q}Tests for {file_name}.{constants.TRIP_Q}\n\n",
