@@ -6,11 +6,15 @@ import templates
 
 
 def build_boilerplate():
-    """Function makes and changes into directory before making challenge, test and init files."""
+    """
+    Function makes and changes into directory
+    before making challenge, test and init files.
+    """
+    constants.CD(constants.ROOT_DIR)
     os.mkdir(templates.dir_path)
     constants.CD(templates.dir_path)
-    utils.write_file(templates.file_name, templates.challenge_tuple)
-    utils.write_file(templates.test_file_name, templates.test_tuple)
+    utils.write_file(templates.file_name, templates.challenge_file)
+    utils.write_file(templates.test_file_name, templates.test_file)
     init = open("__init__.py", "x")
     init.close()
 
