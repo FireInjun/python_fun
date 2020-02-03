@@ -15,6 +15,6 @@ ROOT_DIR = PWD().split(REPO_NAME).pop(0) + REPO_NAME
 SRC_DIR = f"{ROOT_DIR}/src"
 SCRIPT_DIR = f"{ROOT_DIR}/scripts"
 # Regex pattern
-REGEX_NAME = "[^a-zA-Z.\d\s]"
+REGEX_NAME = "[^a-zA-Z.\\d\\s]"
 TRIP_Q = '"""'
 TAB = "    "

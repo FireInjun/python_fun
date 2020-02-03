@@ -9,6 +9,7 @@ verify_ssl = true
 flake8 = "*"
 black = "*"
 pytest = "*"
+pyperclip = "*"
 
 [requires]
 python_version = "3.8"
