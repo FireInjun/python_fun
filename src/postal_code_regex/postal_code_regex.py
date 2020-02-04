@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 import sys
+import re
 
 
-def first_function(something):
-    """ Does nothing with input of 'something'."""
-    pass
+regex_integer_in_range = r"(?=(\d)\d\1)"
+regex_alternating_repetitive_digit_pair = r"[1-9][0-9]{5}$"
 
 
-def second_function(something):
-    """Also does nothing with input of 'something'."""
-    pass
+P = input()
+
+print(
+    bool(re.match(regex_integer_in_range, P))
+    and len(re.findall(regex_alternating_repetitive_digit_pair, P)) < 2
+)
 
 
 if __name__ == "__main__":
