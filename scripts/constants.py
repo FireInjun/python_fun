@@ -11,7 +11,7 @@ UP = utils.up_one
 # Names
 REPO_NAME = "python_fun"
 # Locations
-ROOT_DIR = PWD().split(REPO_NAME).pop(0) + f"/Python/{REPO_NAME}"
+ROOT_DIR = PWD().split(REPO_NAME).pop(0) + f"{REPO_NAME}"
 SRC_DIR = f"{ROOT_DIR}/src"
 SCRIPT_DIR = f"{ROOT_DIR}/scripts"
 # Regex pattern
