@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
 import sys
-import re
-
-
-regex_integer_in_range = r"(?=(\d)\d\1)"
-regex_alternating_repetitive_digit_pair = r"[1-9][0-9]{5}$"
-
-
-P = input()
-
-print(
-    bool(re.match(regex_integer_in_range, P))
-    and len(re.findall(regex_alternating_repetitive_digit_pair, P)) < 2
-)
 
 
 if __name__ == "__main__":
